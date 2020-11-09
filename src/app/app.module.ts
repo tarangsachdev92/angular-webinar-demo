@@ -9,6 +9,8 @@ import { StudentCreateComponent } from './student-create/student-create.componen
 import { StudentEditComponent } from './student-edit/student-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AGDemoListComponent } from './ag-demo-list/ag-demo-list.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     StudentsListComponent,
     StudentCreateComponent,
-    StudentEditComponent
+    StudentEditComponent,
+    AGDemoListComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AgGridModule.withComponents([]),
     HttpClientModule,
     AppRoutingModule,
     FormsModule,

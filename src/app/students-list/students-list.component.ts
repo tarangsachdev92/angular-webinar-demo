@@ -25,6 +25,7 @@ export class StudentsListComponent implements OnInit {
     });
   }
 
+
   // Delete student
   deleteStudent(id): void {
     if (window.confirm('Are you sure, you want to delete?')) {
